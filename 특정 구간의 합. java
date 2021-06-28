@@ -1,0 +1,29 @@
+import java.io.*;
+class Main {
+	public static void main(String[] args) throws Exception {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String temp = br.readLine();
+		int size = Integer.parseInt(temp);
+		String temp2 = br.readLine();
+		String[] temp3 = temp2.split(" ");
+		int[] arr = new int[size];
+		int sum = 0;
+		
+		for(int i=0; i<size; i++)
+		{
+			arr[i] = Integer.parseInt(temp3[i]);
+		}
+		
+		String temp4 = br.readLine();
+		String[] temp5 = temp4.split(" ");
+		int start = Integer.parseInt(temp5[0]);
+		int end = Integer.parseInt(temp5[1]);
+		
+		for(int i=start-1; i<end; i++)
+		{
+			sum += arr[i];
+		}
+		
+		System.out.println(sum);
+	}
+}
